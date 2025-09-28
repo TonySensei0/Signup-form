@@ -1,27 +1,125 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #f5f5f5;
-  font-family: sans-serif;
+  font-family: 'Cinzel', serif;
+  background-color: #f0f0f0;
+  display: flex;
+  height: 100vh;
+}
+
+/* Container: holds sidebar and form */
+.container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: relative;
+  width: 40%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* Odin Logo Overlay Section */
+.logo-section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+
+.logo-section img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
 }
 
 .logo {
-  font-family: 'Cinzel', serif;
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
 
-.logo-section {
-  background-color: rgba(0, 0, 0, 0.5);
+/* Form Section */
+.form-section {
+  width: 60%;
+  padding: 4rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-button {
-  background-color: #596D48;
-  color: white;
+.form-section h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Focus and Invalid Input Styles */
+input:focus {
+  outline: none;
+  border: 1px solid #3b82f6; /* Blue */
+  box-shadow: 0 0 3px #3b82f6;
 }
 
 input:invalid {
   border: 1px solid red;
 }
 
-input:focus {
-  border: 1px solid blue;
-  box-shadow: 0 0 3px blue;
+/* Full-width button at bottom of form */
+button[type="submit"] {
+  grid-column: span 2;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #596D48;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
+button[type="submit"]:hover {
+  background-color: #4a5d3d;
+}

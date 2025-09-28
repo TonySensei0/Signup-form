@@ -5,16 +5,13 @@
   <title>Sign Up Form</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
-  <body>
   <div class="container">
     <div class="sidebar">
-      <img src="assets/images/bg.jpg" alt="Background" class="background-image">
+      <img src="assets/images/marek-piwnicki-7c4Gxa6598I-unsplash.jpg" alt="Background" class="background-image">
       <div class="logo-section">
-        <img src="assets/images/odin-logo.svg" alt="Odin Logo">
+        <img src="assets/images/odin-lined.png" alt="Odin Logo">
         <h1 class="logo">ODIN</h1>
       </div>
     </div>
@@ -22,11 +19,39 @@
     <div class="form-section">
       <h2>Sign up to get started</h2>
       <form action="#">
-        <!-- Form fields go here -->
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+
+        <button type="submit">Create Account</button>
       </form>
     </div>
   </div>
-</body>
-
 </body>
 </html>
